@@ -1,0 +1,53 @@
+# Switch 0 Configuration
+
+en
+conf t
+vlan 10
+name company1
+vlan 20
+name company2
+vlan 99
+name native
+
+interface range fa0/1-2
+switchport mode access
+switchport access vlan 10
+
+interface range fa0/3-4
+switchport mode access
+switchport access vlan 20
+
+interface fa0/24
+switchport mode trunk
+switchport trunk native vlan 99
+switchport trunk allowed vlan 10,20
+
+end
+wr
+
+# Switch 1 Configuration
+
+en
+conf t
+vlan 10
+name company1
+vlan 20
+name company2
+vlan 99
+name native
+
+interface fa0/1
+switchport mode access
+switchport access vlan 10
+
+interface fa0/2
+switchport mode access
+switchport access vlan 20
+
+interface fa0/24
+switchport mode trunk
+switchport trunk native vlan 99
+switchport trunk allowed vlan 10,20
+
+end
+wr
