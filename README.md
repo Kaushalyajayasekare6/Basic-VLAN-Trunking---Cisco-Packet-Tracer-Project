@@ -47,11 +47,6 @@ This project simulates **VLAN trunking** between two Cisco switches using **Cisc
 
 ---
 
-## 📷 Topology Snapshot
-*(You can add a screenshot here if you want)*
-
----
-
 ## ✅ Ideal For
 - Networking students
 - Beginners learning VLAN trunking
